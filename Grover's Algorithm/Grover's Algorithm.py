@@ -1,3 +1,4 @@
+
 print("script started")
 from qiskit import QuantumCircuit
 from qiskit_aer import AerSimulator
@@ -17,9 +18,26 @@ def run_and_print(qc, label):
     print(qc.draw('text')) #draws a nice diagram for your circuit
     print("Statevector:", [round(float(x.real),3) for x in sv]) #prints the real part of all the amplitudes
 
-#creation of the circuit
-qc = QuantumCircuit(2)
-qc.h(0)
-qc.cx(0,1)
-run_and_print(qc,"bell")
+#Grover's Algorithm
+
+n = 2
+
+qc = QuantumCircuit(n) #no ancilla
+
+for i in range (n):
+    qc.h(i)
+
+# ORACLE
+qc.cz(0,1)
+
+#Diffusion Operator
+qc.h(range(n))
+qc.x(range(n))
+qc.h(n-1)
+qc.cx(0, n-1)
+qc.h(n-1)
+qc.x(range(n))
+qc.h(range(n))
+
+run_and_print(qc,"Grover's Algorithm")
 
