@@ -41,8 +41,8 @@ $$|00\rangle = 0.5, \quad |01\rangle = 0.5, \quad |10\rangle = 0.5, \quad |11\ra
 Average $= 0.25$
 
 After diffusion:
-$$\text{new}_{|11\rangle} = 2(0.25) - (-0.5) = \mathbf{1.0}$$
-$$\text{new}_{|00\rangle} = 2(0.25) - (0.5) = \mathbf{0.0}$$
+$$\text{new}_{|11\rangle} = 2(0.25) - (-0.5) = \boldsymbol{1.0}$$
+$$\text{new}_{|00\rangle} = 2(0.25) - (0.5) = \boldsymbol{0.0}$$
 
 $|11\rangle$ gets **100% probability** in just 1 iteration! ✅
 
