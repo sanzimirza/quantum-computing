@@ -20,7 +20,7 @@ def run_and_print(qc, label):
 
 #Grover's Algorithm
 
-n = 2
+n = 3
 
 qc = QuantumCircuit(n) #no ancilla
 
